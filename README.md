@@ -4,52 +4,65 @@
 
 ![image](https://github.com/user-attachments/assets/e546cd6f-1b2e-4293-b18e-cce95683c017)
 
-
 Welcome to **ProgressionXR**, where we blend the power of **AI**, **Extended Reality (XR)**, and **Web3** to take your fitness journey to the next level! 🚀
 
 ### 🌟 Key Features:
 
-- **Social Logins with Dynamic (Multichain)** 🔐  
-  Sign in effortlessly using **Dynamic** for secure, multichain logins.
-  
-- **Connect your Fitness Gears** ⌚🎧  
-  Sync your workouts with **Fitbit** and **VR headsets** for a truly immersive experience.
-  
-- **AI-Driven Wellness Coaches** 🤖🏃‍♀️  
-  Get personalized guidance from your own **AI fitness coach** to stay on track and crush your goals.
+-   **Social Logins with Dynamic (Multichain)** 🔐  
+    Sign in effortlessly using **Dynamic** for secure, multichain logins.
+-   **Connect your Fitness Gears** ⌚🎧  
+    Sync your workouts with **Fitbit** and **VR headsets** for a truly immersive experience.
+-   **AI-Driven Wellness Coaches** 🤖🏃‍♀️  
+    Get personalized guidance from your own **AI fitness coach** to stay on track and crush your goals.
 
-- **Privacy-Preserved Attestations** 🔒  
-  Maintain control of your fitness data with **privacy-first attestations**.
+-   **Privacy-Preserved Attestations** 🔒  
+    Maintain control of your fitness data with **privacy-first attestations**.
 
-- **Predict on Fitness Challenges** 🏅📊  
-  Support your favorite team and predict outcomes of fitness challenges to earn rewards.
+-   **Predict on Fitness Challenges** 🏅📊  
+    Support your favorite team and predict outcomes of fitness challenges to earn rewards.
 
-- **Earn Rewards** 🎁🎉  
-  Complete challenges, stay active, and earn **exclusive rewards** for your achievements.
+-   **Earn Rewards** 🎁🎉  
+    Complete challenges, stay active, and earn **exclusive rewards** for your achievements.
 
-### 🔗 Contracts:
+## Sign Protocol Integration
 
-- **SKALE**:
-  - [Mock USDC](https://internal.explorer.testnet.skalenodes.com/address/0x593126a49ACb15450CEc39EC271d25fA2e2cABd6?tab=txs)
-  - [Health Gains](https://internal.explorer.testnet.skalenodes.com/address/0xa2D6c4e6E9E87Ecf7F0422Be7C278C287E197798?tab=write_contract)
-  - [Fitness Market](https://internal.explorer.testnet.skalenodes.com/address/0x8208834c529664385fd2CA735EFB64a41d79823b)
+-   **Sign Client**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/0a9e702d3a353d2383fb6208c717f5f134e06fd7/src/components/workout-modal.tsx#L22)
 
-- **Flow EVM**:
-  - [Mock USDC](https://evm-testnet.flowscan.io/address/0x309222b7833D3D0A59A8eBf9C64A5790bf43E2aA?tab=write_contract)
-  - [Health Gains](https://evm-testnet.flowscan.io/address/0xF99b791257ab50be7F235BC825E7d4B83942cf38?tab=write_contract)
-  - [Fitness Market](https://evm-testnet.flowscan.io/address/0x6B512f206AAc1f78CE291D090dDC8397b911D7b6)
+-   **Sign Schema Creation**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/0a9e702d3a353d2383fb6208c717f5f134e06fd7/src/components/workout-modal.tsx#L72)
 
-- **MorphL2**:
-  - [mUSDC](https://explorer-holesky.morphl2.io/address/0x306fB44CFB6Ac9A58EA9f0c64c7E5e500964cBEa?tab=write_contract)
-  - [Health Gains](https://explorer-holesky.morphl2.io/address/0x04da57512F7861fdf16728b5fC26a7321a0E5Cdc?tab=write_contract)
+-   **Sign Attestation**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/0a9e702d3a353d2383fb6208c717f5f134e06fd7/src/components/workout-modal.tsx#L81)
 
-- **AirDAO**:
-  - [Mock USDC](https://testnet.airdao.io/explorer/address/0x309222b7833D3D0A59A8eBf9C64A5790bf43E2aA)
-  - [Health Gains](https://testnet.airdao.io/explorer/address/0xF99b791257ab50be7F235BC825E7d4B83942cf38)
-  - [Fitness Market](https://testnet.airdao.io/explorer/address/0xDD7321051829fC11af41aB2fb4045660E45Af23f)
+-   **Sign Explore**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/0a9e702d3a353d2383fb6208c717f5f134e06fd7/src/components/health/EndWorkoutButton.tsx#L107)
 
+-   **Vide Reference** : [Here](https://asset.cloudinary.com/dt1dn773q/f88383a3852cf2b6850a80cade05ef1d)
 
+-   **Live Link** [Link](https://xr-frontend-sign-lit.vercel.app)
 
+## Lit Protocol Integration
+
+-   **Lit Encryption**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/12b36b7ca378992c4a3cf58de2f15c78c49ad743/src/hooks/useLitEncryption.tsx#L22)
+
+-   **Live Link** [Link](https://xr-frontend-sign-lit.vercel.app)
+
+## Dynamic Integration
+
+-   **Setup**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/e0019dc640e6a5e1caa6ab61c2aec210a144fcbb/src/components/OnchainProviders.tsx#L33)
+
+-   **Wallet Connect**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/e0019dc640e6a5e1caa6ab61c2aec210a144fcbb/src/components/layout/Layout.tsx#L99)
+
+-   **Account**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/e0019dc640e6a5e1caa6ab61c2aec210a144fcbb/src/hooks/useMorphBiconomyAcc.tsx#L15)
+
+## Polygon
+
+-   **Account Client**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/0a9e702d3a353d2383fb6208c717f5f134e06fd7/src/components/workout-modal.tsx#L23)
+
+-   **Live Link** [Link](https://xr-frontend-sign-lit.vercel.app)
+
+## Phala Network
+
+AI Coaches, Athena and Blaze, provide personalized challenges and motivational advice. These AI-driven coaches engage users by offering tailored challenges, feedback, and motivation, enhancing the overall user interaction and experience.
+
+-   **AI-Driven Wellness Coaches**: [Code](https://github.com/ProgressionXR-eth-sanfrancisco/xr-frontend/blob/ddf8bc2ab714cbeed40975aebf379695bc479734/src/app/ai-coaches/page.tsx#L126)
 
 ---
 
