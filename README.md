@@ -27,28 +27,27 @@ Welcome to **ProgressionXR**, where we blend the power of **AI**, **Extended Rea
 - **Earn Rewards** 🎁🎉  
   Complete challenges, stay active, and earn **exclusive rewards** for your achievements.
 
-
 ### 🔗 Contracts:
 
 - **SKALE**:
   - [Mock USDC](https://internal.explorer.testnet.skalenodes.com/address/0x593126a49ACb15450CEc39EC271d25fA2e2cABd6?tab=txs)
   - [Health Gains](https://internal.explorer.testnet.skalenodes.com/address/0xa2D6c4e6E9E87Ecf7F0422Be7C278C287E197798?tab=write_contract)
-  - **Fitness Market**: (URL not provided)
+  - [Fitness Market](https://internal.explorer.testnet.skalenodes.com/address/0x8208834c529664385fd2CA735EFB64a41d79823b)
 
 - **Flow EVM**:
   - [Mock USDC](https://evm-testnet.flowscan.io/address/0x309222b7833D3D0A59A8eBf9C64A5790bf43E2aA?tab=write_contract)
   - [Health Gains](https://evm-testnet.flowscan.io/address/0xF99b791257ab50be7F235BC825E7d4B83942cf38?tab=write_contract)
-  - **Fitness Market**: (URL not provided)
+  - [Fitness Market](https://evm-testnet.flowscan.io/address/0x6B512f206AAc1f78CE291D090dDC8397b911D7b6)
 
 - **MorphL2**:
   - [mUSDC](https://explorer-holesky.morphl2.io/address/0x306fB44CFB6Ac9A58EA9f0c64c7E5e500964cBEa?tab=write_contract)
   - [Health Gains](https://explorer-holesky.morphl2.io/address/0x04da57512F7861fdf16728b5fC26a7321a0E5Cdc?tab=write_contract)
-  - **Fitness Market**: (URL not provided)
 
 - **AirDAO**:
   - [Mock USDC](https://testnet.airdao.io/explorer/address/0x309222b7833D3D0A59A8eBf9C64A5790bf43E2aA)
   - [Health Gains](https://testnet.airdao.io/explorer/address/0xF99b791257ab50be7F235BC825E7d4B83942cf38)
-  - **Fitness Market**: (URL not provided)
+  - [Fitness Market](https://testnet.airdao.io/explorer/address/0xDD7321051829fC11af41aB2fb4045660E45Af23f)
+
 
 
 
