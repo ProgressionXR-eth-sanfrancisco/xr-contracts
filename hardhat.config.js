@@ -23,10 +23,20 @@ module.exports = {
       chainId: 22040,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
-    // skale: {
-    //   url: "https://testnet.skalenodes.com/v1/lanky-ill-funny-testnet",
-    //   chainId: 37084624,
-    //   accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-    // },
+    skale: {
+      url: "https://testnet.skalenodes.com/v1/lanky-ill-funny-testnet",
+      chainId: 37084624,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    },
+    morphl2: {
+      url: "https://rpc-holesky.morphl2.io",
+      chainId: 2810,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    },
+    flowEvm: {
+      url: "https://testnet.evm.nodes.onflow.org",
+      chainId: 545,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    },
   },
 };

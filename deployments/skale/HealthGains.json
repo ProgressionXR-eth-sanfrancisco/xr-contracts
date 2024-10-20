@@ -1,0 +1,573 @@
+{
+  "address": "0xa2D6c4e6E9E87Ecf7F0422Be7C278C287E197798",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_rewardTokenAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "DailyWorkoutCompleted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "FitnessChallengeJoined",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newInterval",
+          "type": "uint256"
+        }
+      ],
+      "name": "RewardIntervalUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "StakeLost",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Staked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "UserReset",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "WeeklyChallengeCompleted",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "_initializeUser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "dailyReward",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getUserInfo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "streak",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastWorkoutTimestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "weeklyChallengeCompleted",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stakeAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "joinFitnessChallenge",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "penaltyPercentage",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "recordDailyWorkout",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "resetUser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rewardInterval",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rewardToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newReward",
+          "type": "uint256"
+        }
+      ],
+      "name": "setDailyReward",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newInterval",
+          "type": "uint256"
+        }
+      ],
+      "name": "setRewardInterval",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_rewardTokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setRewardToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newRequirement",
+          "type": "uint256"
+        }
+      ],
+      "name": "setStreakRequirement",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newReward",
+          "type": "uint256"
+        }
+      ],
+      "name": "setWeeklyChallengeReward",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "stakeTokens",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "streakRequirement",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "users",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "streak",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastWorkoutTimestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "weeklyChallengeCompleted",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stakeAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "weeklyChallengeReward",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xbd8d0bf400a425e51401f9e9a66c5ee0e8ccd542b88b37fe4335dd8be0055aaf",
+  "receipt": {
+    "to": "0x0000000000000000000000000000000000000000",
+    "from": "0x2cac89ABf06DbE5d3a059517053B7144074e1CE5",
+    "contractAddress": "0xa2D6c4e6E9E87Ecf7F0422Be7C278C287E197798",
+    "transactionIndex": 0,
+    "gasUsed": "1488823",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x2ce59c94de6ade73fb39b9fcc4a4fa67f7357b8888a0a98bf62c795058980137",
+    "transactionHash": "0xbd8d0bf400a425e51401f9e9a66c5ee0e8ccd542b88b37fe4335dd8be0055aaf",
+    "logs": [],
+    "blockNumber": 2205900,
+    "cumulativeGasUsed": "1488823",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x593126a49ACb15450CEc39EC271d25fA2e2cABd6"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "ec95589d377dd86a7d9a7851f11bb3a3",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_rewardTokenAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"DailyWorkoutCompleted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"FitnessChallengeJoined\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newInterval\",\"type\":\"uint256\"}],\"name\":\"RewardIntervalUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"StakeLost\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Staked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"UserReset\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"WeeklyChallengeCompleted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"_initializeUser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"dailyReward\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"getUserInfo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"streak\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lastWorkoutTimestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"weeklyChallengeCompleted\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"stakeAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"joinFitnessChallenge\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"penaltyPercentage\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"recordDailyWorkout\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"resetUser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewardInterval\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewardToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newReward\",\"type\":\"uint256\"}],\"name\":\"setDailyReward\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newInterval\",\"type\":\"uint256\"}],\"name\":\"setRewardInterval\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_rewardTokenAddress\",\"type\":\"address\"}],\"name\":\"setRewardToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newRequirement\",\"type\":\"uint256\"}],\"name\":\"setStreakRequirement\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newReward\",\"type\":\"uint256\"}],\"name\":\"setWeeklyChallengeReward\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"stakeTokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"streakRequirement\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"users\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"streak\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lastWorkoutTimestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"weeklyChallengeCompleted\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"stakeAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"weeklyChallengeReward\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/healthGains.sol\":\"HealthGains\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/healthGains.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.19;\\n\\ninterface IERC20 {\\n    function transfer(address recipient, uint256 amount) external returns (bool);\\n    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);\\n    function balanceOf(address account) external view returns (uint256);\\n}\\n\\ncontract HealthGains {\\n    IERC20 public rewardToken;\\n    address public admin;\\n\\n    struct User {\\n        uint256 streak;\\n        uint256 lastWorkoutTimestamp;\\n        uint256 weeklyChallengeCompleted;\\n        uint256 stakeAmount;\\n    }\\n\\n    mapping(address => User) public users;\\n    uint256 public dailyReward = 10**6;\\n    uint256 public weeklyChallengeReward = 100**6;\\n    uint256 public streakRequirement = 7; // 7-day streak to complete the weekly challenge\\n    uint256 public rewardInterval = 1 days; // Default reward interval is 24 hours\\n    uint256 public penaltyPercentage = 10; // 10% of the stake lost if streak is broken\\n\\n    event DailyWorkoutCompleted(address indexed user, uint256 amount);\\n    event WeeklyChallengeCompleted(address indexed user, uint256 amount);\\n    event FitnessChallengeJoined(address indexed user);\\n    event UserReset(address indexed user);\\n    event Staked(address indexed user, uint256 amount);\\n    event StakeLost(address indexed user, uint256 amount);\\n    event RewardIntervalUpdated(uint256 newInterval);\\n\\n    modifier onlyAdmin() {\\n        require(msg.sender == admin, \\\"Only admin can perform this action\\\");\\n        _;\\n    }\\n\\n    constructor(address _rewardTokenAddress) {\\n        rewardToken = IERC20(_rewardTokenAddress);\\n        admin = msg.sender;\\n    }\\n\\n    function _initializeUser(address _user) public {\\n        // Initialize the user if it's the first time interacting with the contract\\n        if (users[_user].lastWorkoutTimestamp == 0) {\\n            users[_user].lastWorkoutTimestamp = block.timestamp;\\n        }\\n    }\\n\\n    function stakeTokens(uint256 _amount) external {\\n        require(_amount > 0, \\\"Stake amount must be greater than 0\\\");\\n        \\n        // Initialize user if necessary\\n        _initializeUser(msg.sender);\\n        \\n        User storage user = users[msg.sender];\\n\\n        // Transfer the staking amount from user to contract\\n        rewardToken.transferFrom(msg.sender, address(this), _amount);\\n        user.stakeAmount += _amount;\\n\\n        emit Staked(msg.sender, _amount);\\n    }\\n\\n    function recordDailyWorkout() external {\\n        User storage user = users[msg.sender];\\n\\n        // Ensure the rewardInterval has passed since the last workout\\n        require(block.timestamp >= user.lastWorkoutTimestamp + rewardInterval, \\\"You can only claim rewards once per interval\\\");\\n\\n        // Check if the user has missed the workout for more than 2 days\\n        if (block.timestamp >= user.lastWorkoutTimestamp + 2 days) {\\n            uint256 penalty = (user.stakeAmount * penaltyPercentage) / 100; // 10% penalty\\n            user.stakeAmount -= penalty;\\n\\n            // Transfer the penalty amount to the admin or burn it (here sending to admin)\\n            rewardToken.transfer(admin, penalty);\\n            user.streak = 0; // Reset streak\\n\\n            emit StakeLost(msg.sender, penalty);\\n        }\\n\\n        // Update the user's workout data\\n        user.lastWorkoutTimestamp = block.timestamp;\\n        user.streak++;\\n\\n        // Reward the user for completing a daily workout\\n        rewardToken.transfer(msg.sender, dailyReward);\\n        emit DailyWorkoutCompleted(msg.sender, dailyReward);\\n\\n        // If the user has completed the streak requirement, reward them for completing the weekly challenge\\n        if (user.streak >= streakRequirement) {\\n            user.weeklyChallengeCompleted++;\\n\\n            // Reward the user for completing the weekly challenge\\n            rewardToken.transfer(msg.sender, weeklyChallengeReward);\\n            emit WeeklyChallengeCompleted(msg.sender, weeklyChallengeReward);\\n        }\\n    }\\n\\n    function joinFitnessChallenge() external {\\n        User storage user = users[msg.sender];\\n        require(user.weeklyChallengeCompleted > 0, \\\"Complete a weekly challenge to join\\\");\\n\\n        // Allow the user to join the fitness challenge\\n        user.weeklyChallengeCompleted--;\\n        emit FitnessChallengeJoined(msg.sender);\\n    }\\n\\n    function setDailyReward(uint256 _newReward) external onlyAdmin {\\n        dailyReward = _newReward;\\n    }\\n\\n    function setWeeklyChallengeReward(uint256 _newReward) external onlyAdmin {\\n        weeklyChallengeReward = _newReward;\\n    }\\n\\n    function setStreakRequirement(uint256 _newRequirement) external onlyAdmin {\\n        streakRequirement = _newRequirement;\\n    }\\n\\n    function setRewardToken(address _rewardTokenAddress) external onlyAdmin {\\n        rewardToken = IERC20(_rewardTokenAddress);\\n    }\\n\\n    function setRewardInterval(uint256 _newInterval) external onlyAdmin {\\n        rewardInterval = _newInterval;\\n        emit RewardIntervalUpdated(_newInterval);\\n    }\\n\\n    function getUserInfo(address _user) external view returns (uint256 streak, uint256 lastWorkoutTimestamp, uint256 weeklyChallengeCompleted, uint256 stakeAmount) {\\n        User storage user = users[_user];\\n        return (user.streak, user.lastWorkoutTimestamp, user.weeklyChallengeCompleted, user.stakeAmount);\\n    }\\n\\n    // Helper function to reset a user's details \\n    function resetUser(address _user) external onlyAdmin {\\n        User storage user = users[_user];\\n        user.streak = 0;\\n        user.lastWorkoutTimestamp = 0;\\n        user.weeklyChallengeCompleted = 0;\\n        user.stakeAmount = 0;\\n\\n        emit UserReset(_user);\\n    }\\n}\\n\",\"keccak256\":\"0x2bc716a61166efa8959e80fb2de47790887f76189337732f590dc63a28be5dea\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052620f424060035564e8d4a51000600455600760055562015180600655600a6007553480156200003257600080fd5b50604051620018ef380380620018ef83398181016040528101906200005891906200014a565b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506200017c565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006200011282620000e5565b9050919050565b620001248162000105565b81146200013057600080fd5b50565b600081519050620001448162000119565b92915050565b600060208284031215620001635762000162620000e0565b5b6000620001738482850162000133565b91505092915050565b611763806200018c6000396000f3fe608060405234801561001057600080fd5b50600436106101215760003560e01c80636770edbf116100ad578063c19a2cab11610071578063c19a2cab146102c0578063c964ad45146102dc578063e3e84213146102fa578063f7c618c114610316578063f851a4401461033457610121565b80636770edbf1461021b5780637547c7a3146102375780638aee812714610253578063a87430ba1461026f578063bec4de3f146102a257610121565b806322bc7449116100f457806322bc74491461018857806324abaa9414610192578063343959b4146101ae5780634365b2e0146101ca5780636386c1c7146101e857610121565b80630aa43533146101265780630affc1aa1461014257806315908d511461014c5780631ee005f71461016a575b600080fd5b610140600480360381019061013b919061109a565b610352565b005b61014a6103ec565b005b6101546104d6565b60405161016191906110d6565b60405180910390f35b6101726104dc565b60405161017f91906110d6565b60405180910390f35b6101906104e2565b005b6101ac60048036038101906101a7919061109a565b61091a565b005b6101c860048036038101906101c3919061114f565b6109b4565b005b6101d2610af6565b6040516101df91906110d6565b60405180910390f35b61020260048036038101906101fd919061114f565b610afc565b604051610212949392919061117c565b60405180910390f35b6102356004803603810190610230919061109a565b610b69565b005b610251600480360381019061024c919061109a565b610c03565b005b61026d6004803603810190610268919061114f565b610da0565b005b6102896004803603810190610284919061114f565b610e73565b604051610299949392919061117c565b60405180910390f35b6102aa610ea3565b6040516102b791906110d6565b60405180910390f35b6102da60048036038101906102d5919061114f565b610ea9565b005b6102e4610f3e565b6040516102f191906110d6565b60405180910390f35b610314600480360381019061030f919061109a565b610f44565b005b61031e611015565b60405161032b9190611220565b60405180910390f35b61033c611039565b604051610349919061124a565b60405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146103e2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103d9906112e8565b60405180910390fd5b8060038190555050565b6000600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090506000816002015411610476576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161046d9061137a565b60405180910390fd5b80600201600081548092919061048b906113c9565b91905055503373ffffffffffffffffffffffffffffffffffffffff167f58af6192beaa7d28c900eea3507d0fd04bcedee033b584335e315d51f227489260405160405180910390a250565b60075481565b60055481565b6000600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050600654816001015461053791906113f2565b421015610579576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161057090611498565b60405180910390fd5b6202a300816001015461058c91906113f2565b42106106ea576000606460075483600301546105a891906114b8565b6105b29190611529565b9050808260030160008282546105c8919061155a565b9250508190555060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16836040518363ffffffff1660e01b815260040161064c92919061158e565b6020604051808303816000875af115801561066b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061068f91906115ef565b50600082600001819055503373ffffffffffffffffffffffffffffffffffffffff167f221dd8f6a26093eedd871090946512c486459f48802b08b43f26aec2c6a5784d826040516106e091906110d6565b60405180910390a2505b4281600101819055508060000160008154809291906107089061161c565b919050555060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb336003546040518363ffffffff1660e01b815260040161076a92919061158e565b6020604051808303816000875af1158015610789573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107ad91906115ef565b503373ffffffffffffffffffffffffffffffffffffffff167f4a57f4efc6c0de9820c8367e84759bb88164374abe2f69b26a6bcf90305ab1346003546040516107f691906110d6565b60405180910390a2600554816000015410610917578060020160008154809291906108209061161c565b919050555060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb336004546040518363ffffffff1660e01b815260040161088292919061158e565b6020604051808303816000875af11580156108a1573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108c591906115ef565b503373ffffffffffffffffffffffffffffffffffffffff167fdb0cac15a313362330fcec046738a66a27fa4a6884bfdc8684245ba7f9a4fd6260045460405161090e91906110d6565b60405180910390a25b50565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146109aa576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016109a1906112e8565b60405180910390fd5b8060048190555050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610a44576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610a3b906112e8565b60405180910390fd5b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050600081600001819055506000816001018190555060008160020181905550600081600301819055508173ffffffffffffffffffffffffffffffffffffffff167fa84a765ff0b34a8011d2cf523c71c7cc26b88417c652ec9b3bad84220ef8f77760405160405180910390a25050565b60045481565b6000806000806000600260008773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905080600001548160010154826002015483600301549450945094509450509193509193565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610bf9576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610bf0906112e8565b60405180910390fd5b8060058190555050565b60008111610c46576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610c3d906116d6565b60405180910390fd5b610c4f33610ea9565b6000600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd3330856040518463ffffffff1660e01b8152600401610cef939291906116f6565b6020604051808303816000875af1158015610d0e573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d3291906115ef565b5081816003016000828254610d4791906113f2565b925050819055503373ffffffffffffffffffffffffffffffffffffffff167f9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d83604051610d9491906110d6565b60405180910390a25050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610e30576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610e27906112e8565b60405180910390fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b60026020528060005260406000206000915090508060000154908060010154908060020154908060030154905084565b60065481565b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001015403610f3b5742600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101819055505b50565b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610fd4576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610fcb906112e8565b60405180910390fd5b806006819055507ff1f76dbb309004607c46a358b9ba02def4a875507251e019a4df88a43ff5a73c8160405161100a91906110d6565b60405180910390a150565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080fd5b6000819050919050565b61107781611064565b811461108257600080fd5b50565b6000813590506110948161106e565b92915050565b6000602082840312156110b0576110af61105f565b5b60006110be84828501611085565b91505092915050565b6110d081611064565b82525050565b60006020820190506110eb60008301846110c7565b92915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061111c826110f1565b9050919050565b61112c81611111565b811461113757600080fd5b50565b60008135905061114981611123565b92915050565b6000602082840312156111655761116461105f565b5b60006111738482850161113a565b91505092915050565b600060808201905061119160008301876110c7565b61119e60208301866110c7565b6111ab60408301856110c7565b6111b860608301846110c7565b95945050505050565b6000819050919050565b60006111e66111e16111dc846110f1565b6111c1565b6110f1565b9050919050565b60006111f8826111cb565b9050919050565b600061120a826111ed565b9050919050565b61121a816111ff565b82525050565b60006020820190506112356000830184611211565b92915050565b61124481611111565b82525050565b600060208201905061125f600083018461123b565b92915050565b600082825260208201905092915050565b7f4f6e6c792061646d696e2063616e20706572666f726d2074686973206163746960008201527f6f6e000000000000000000000000000000000000000000000000000000000000602082015250565b60006112d2602283611265565b91506112dd82611276565b604082019050919050565b60006020820190508181036000830152611301816112c5565b9050919050565b7f436f6d706c6574652061207765656b6c79206368616c6c656e676520746f206a60008201527f6f696e0000000000000000000000000000000000000000000000000000000000602082015250565b6000611364602383611265565b915061136f82611308565b604082019050919050565b6000602082019050818103600083015261139381611357565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006113d482611064565b9150600082036113e7576113e661139a565b5b600182039050919050565b60006113fd82611064565b915061140883611064565b92508282019050808211156114205761141f61139a565b5b92915050565b7f596f752063616e206f6e6c7920636c61696d2072657761726473206f6e63652060008201527f70657220696e74657276616c0000000000000000000000000000000000000000602082015250565b6000611482602c83611265565b915061148d82611426565b604082019050919050565b600060208201905081810360008301526114b181611475565b9050919050565b60006114c382611064565b91506114ce83611064565b92508282026114dc81611064565b915082820484148315176114f3576114f261139a565b5b5092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b600061153482611064565b915061153f83611064565b92508261154f5761154e6114fa565b5b828204905092915050565b600061156582611064565b915061157083611064565b92508282039050818111156115885761158761139a565b5b92915050565b60006040820190506115a3600083018561123b565b6115b060208301846110c7565b9392505050565b60008115159050919050565b6115cc816115b7565b81146115d757600080fd5b50565b6000815190506115e9816115c3565b92915050565b6000602082840312156116055761160461105f565b5b6000611613848285016115da565b91505092915050565b600061162782611064565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82036116595761165861139a565b5b600182019050919050565b7f5374616b6520616d6f756e74206d75737420626520677265617465722074686160008201527f6e20300000000000000000000000000000000000000000000000000000000000602082015250565b60006116c0602383611265565b91506116cb82611664565b604082019050919050565b600060208201905081810360008301526116ef816116b3565b9050919050565b600060608201905061170b600083018661123b565b611718602083018561123b565b61172560408301846110c7565b94935050505056fea264697066735822122062bfb5b5b768dbb5b544aa8022b2b901fd8a7eb4e17241b2be05c0c983252aff64736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101215760003560e01c80636770edbf116100ad578063c19a2cab11610071578063c19a2cab146102c0578063c964ad45146102dc578063e3e84213146102fa578063f7c618c114610316578063f851a4401461033457610121565b80636770edbf1461021b5780637547c7a3146102375780638aee812714610253578063a87430ba1461026f578063bec4de3f146102a257610121565b806322bc7449116100f457806322bc74491461018857806324abaa9414610192578063343959b4146101ae5780634365b2e0146101ca5780636386c1c7146101e857610121565b80630aa43533146101265780630affc1aa1461014257806315908d511461014c5780631ee005f71461016a575b600080fd5b610140600480360381019061013b919061109a565b610352565b005b61014a6103ec565b005b6101546104d6565b60405161016191906110d6565b60405180910390f35b6101726104dc565b60405161017f91906110d6565b60405180910390f35b6101906104e2565b005b6101ac60048036038101906101a7919061109a565b61091a565b005b6101c860048036038101906101c3919061114f565b6109b4565b005b6101d2610af6565b6040516101df91906110d6565b60405180910390f35b61020260048036038101906101fd919061114f565b610afc565b604051610212949392919061117c565b60405180910390f35b6102356004803603810190610230919061109a565b610b69565b005b610251600480360381019061024c919061109a565b610c03565b005b61026d6004803603810190610268919061114f565b610da0565b005b6102896004803603810190610284919061114f565b610e73565b604051610299949392919061117c565b60405180910390f35b6102aa610ea3565b6040516102b791906110d6565b60405180910390f35b6102da60048036038101906102d5919061114f565b610ea9565b005b6102e4610f3e565b6040516102f191906110d6565b60405180910390f35b610314600480360381019061030f919061109a565b610f44565b005b61031e611015565b60405161032b9190611220565b60405180910390f35b61033c611039565b604051610349919061124a565b60405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146103e2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103d9906112e8565b60405180910390fd5b8060038190555050565b6000600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090506000816002015411610476576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161046d9061137a565b60405180910390fd5b80600201600081548092919061048b906113c9565b91905055503373ffffffffffffffffffffffffffffffffffffffff167f58af6192beaa7d28c900eea3507d0fd04bcedee033b584335e315d51f227489260405160405180910390a250565b60075481565b60055481565b6000600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050600654816001015461053791906113f2565b421015610579576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161057090611498565b60405180910390fd5b6202a300816001015461058c91906113f2565b42106106ea576000606460075483600301546105a891906114b8565b6105b29190611529565b9050808260030160008282546105c8919061155a565b9250508190555060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16836040518363ffffffff1660e01b815260040161064c92919061158e565b6020604051808303816000875af115801561066b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061068f91906115ef565b50600082600001819055503373ffffffffffffffffffffffffffffffffffffffff167f221dd8f6a26093eedd871090946512c486459f48802b08b43f26aec2c6a5784d826040516106e091906110d6565b60405180910390a2505b4281600101819055508060000160008154809291906107089061161c565b919050555060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb336003546040518363ffffffff1660e01b815260040161076a92919061158e565b6020604051808303816000875af1158015610789573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107ad91906115ef565b503373ffffffffffffffffffffffffffffffffffffffff167f4a57f4efc6c0de9820c8367e84759bb88164374abe2f69b26a6bcf90305ab1346003546040516107f691906110d6565b60405180910390a2600554816000015410610917578060020160008154809291906108209061161c565b919050555060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb336004546040518363ffffffff1660e01b815260040161088292919061158e565b6020604051808303816000875af11580156108a1573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108c591906115ef565b503373ffffffffffffffffffffffffffffffffffffffff167fdb0cac15a313362330fcec046738a66a27fa4a6884bfdc8684245ba7f9a4fd6260045460405161090e91906110d6565b60405180910390a25b50565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146109aa576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016109a1906112e8565b60405180910390fd5b8060048190555050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610a44576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610a3b906112e8565b60405180910390fd5b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050600081600001819055506000816001018190555060008160020181905550600081600301819055508173ffffffffffffffffffffffffffffffffffffffff167fa84a765ff0b34a8011d2cf523c71c7cc26b88417c652ec9b3bad84220ef8f77760405160405180910390a25050565b60045481565b6000806000806000600260008773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905080600001548160010154826002015483600301549450945094509450509193509193565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610bf9576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610bf0906112e8565b60405180910390fd5b8060058190555050565b60008111610c46576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610c3d906116d6565b60405180910390fd5b610c4f33610ea9565b6000600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd3330856040518463ffffffff1660e01b8152600401610cef939291906116f6565b6020604051808303816000875af1158015610d0e573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d3291906115ef565b5081816003016000828254610d4791906113f2565b925050819055503373ffffffffffffffffffffffffffffffffffffffff167f9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d83604051610d9491906110d6565b60405180910390a25050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610e30576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610e27906112e8565b60405180910390fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b60026020528060005260406000206000915090508060000154908060010154908060020154908060030154905084565b60065481565b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001015403610f3b5742600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101819055505b50565b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610fd4576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610fcb906112e8565b60405180910390fd5b806006819055507ff1f76dbb309004607c46a358b9ba02def4a875507251e019a4df88a43ff5a73c8160405161100a91906110d6565b60405180910390a150565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080fd5b6000819050919050565b61107781611064565b811461108257600080fd5b50565b6000813590506110948161106e565b92915050565b6000602082840312156110b0576110af61105f565b5b60006110be84828501611085565b91505092915050565b6110d081611064565b82525050565b60006020820190506110eb60008301846110c7565b92915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061111c826110f1565b9050919050565b61112c81611111565b811461113757600080fd5b50565b60008135905061114981611123565b92915050565b6000602082840312156111655761116461105f565b5b60006111738482850161113a565b91505092915050565b600060808201905061119160008301876110c7565b61119e60208301866110c7565b6111ab60408301856110c7565b6111b860608301846110c7565b95945050505050565b6000819050919050565b60006111e66111e16111dc846110f1565b6111c1565b6110f1565b9050919050565b60006111f8826111cb565b9050919050565b600061120a826111ed565b9050919050565b61121a816111ff565b82525050565b60006020820190506112356000830184611211565b92915050565b61124481611111565b82525050565b600060208201905061125f600083018461123b565b92915050565b600082825260208201905092915050565b7f4f6e6c792061646d696e2063616e20706572666f726d2074686973206163746960008201527f6f6e000000000000000000000000000000000000000000000000000000000000602082015250565b60006112d2602283611265565b91506112dd82611276565b604082019050919050565b60006020820190508181036000830152611301816112c5565b9050919050565b7f436f6d706c6574652061207765656b6c79206368616c6c656e676520746f206a60008201527f6f696e0000000000000000000000000000000000000000000000000000000000602082015250565b6000611364602383611265565b915061136f82611308565b604082019050919050565b6000602082019050818103600083015261139381611357565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006113d482611064565b9150600082036113e7576113e661139a565b5b600182039050919050565b60006113fd82611064565b915061140883611064565b92508282019050808211156114205761141f61139a565b5b92915050565b7f596f752063616e206f6e6c7920636c61696d2072657761726473206f6e63652060008201527f70657220696e74657276616c0000000000000000000000000000000000000000602082015250565b6000611482602c83611265565b915061148d82611426565b604082019050919050565b600060208201905081810360008301526114b181611475565b9050919050565b60006114c382611064565b91506114ce83611064565b92508282026114dc81611064565b915082820484148315176114f3576114f261139a565b5b5092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b600061153482611064565b915061153f83611064565b92508261154f5761154e6114fa565b5b828204905092915050565b600061156582611064565b915061157083611064565b92508282039050818111156115885761158761139a565b5b92915050565b60006040820190506115a3600083018561123b565b6115b060208301846110c7565b9392505050565b60008115159050919050565b6115cc816115b7565b81146115d757600080fd5b50565b6000815190506115e9816115c3565b92915050565b6000602082840312156116055761160461105f565b5b6000611613848285016115da565b91505092915050565b600061162782611064565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82036116595761165861139a565b5b600182019050919050565b7f5374616b6520616d6f756e74206d75737420626520677265617465722074686160008201527f6e20300000000000000000000000000000000000000000000000000000000000602082015250565b60006116c0602383611265565b91506116cb82611664565b604082019050919050565b600060208201905081810360008301526116ef816116b3565b9050919050565b600060608201905061170b600083018661123b565b611718602083018561123b565b61172560408301846110c7565b94935050505056fea264697066735822122062bfb5b5b768dbb5b544aa8022b2b901fd8a7eb4e17241b2be05c0c983252aff64736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 818,
+        "contract": "contracts/healthGains.sol:HealthGains",
+        "label": "rewardToken",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_contract(IERC20)815"
+      },
+      {
+        "astId": 820,
+        "contract": "contracts/healthGains.sol:HealthGains",
+        "label": "admin",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 834,
+        "contract": "contracts/healthGains.sol:HealthGains",
+        "label": "users",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_struct(User)829_storage)"
+      },
+      {
+        "astId": 839,
+        "contract": "contracts/healthGains.sol:HealthGains",
+        "label": "dailyReward",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 844,
+        "contract": "contracts/healthGains.sol:HealthGains",
+        "label": "weeklyChallengeReward",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 847,
+        "contract": "contracts/healthGains.sol:HealthGains",
+        "label": "streakRequirement",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 850,
+        "contract": "contracts/healthGains.sol:HealthGains",
+        "label": "rewardInterval",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 853,
+        "contract": "contracts/healthGains.sol:HealthGains",
+        "label": "penaltyPercentage",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(IERC20)815": {
+        "encoding": "inplace",
+        "label": "contract IERC20",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_struct(User)829_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct HealthGains.User)",
+        "numberOfBytes": "32",
+        "value": "t_struct(User)829_storage"
+      },
+      "t_struct(User)829_storage": {
+        "encoding": "inplace",
+        "label": "struct HealthGains.User",
+        "members": [
+          {
+            "astId": 822,
+            "contract": "contracts/healthGains.sol:HealthGains",
+            "label": "streak",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 824,
+            "contract": "contracts/healthGains.sol:HealthGains",
+            "label": "lastWorkoutTimestamp",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 826,
+            "contract": "contracts/healthGains.sol:HealthGains",
+            "label": "weeklyChallengeCompleted",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 828,
+            "contract": "contracts/healthGains.sol:HealthGains",
+            "label": "stakeAmount",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
